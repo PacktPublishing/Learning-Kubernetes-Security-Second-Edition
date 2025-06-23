@@ -1,0 +1,1 @@
+Chapter 12, Defense in Depth, will introduce the concept of high availability and talk about how we can apply high availability in the Kubernetes cluster. Next, it will introduce Vault, a handy secrets management product for the Kubernetes cluster. Will cover also how to use Tetragon and Falco to detect anomalous activities in the Kubernetes cluster.

@@ -1,0 +1,1 @@
+Chapter 4, Applying the Principle of Least Privilege in Kubernetes, a critical approach for minimizing the security risks associated with over-permissions. Readers will learn how to restrict access within the Kubernetes environment by configuring roles, service accounts, and role bindings to provide only the necessary permissions for each subject, component, or workload.

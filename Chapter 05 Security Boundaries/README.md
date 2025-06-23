@@ -1,0 +1,1 @@
+Chapter 5, Configuring Kubernetes Security Boundaries, focus on  how to segment and isolate different components to enhance overall cluster security. Readers will gain insights into key boundaries, such as the separation between namespaces, nodes, and network segments, which help contain potential threats and limit unauthorized access.
