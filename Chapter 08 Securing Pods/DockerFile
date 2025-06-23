@@ -1,0 +1,7 @@
+FROM ubuntu
+
+ARG NAME=Raul
+
+COPY script.sh /script.sh
+
+ENTRYPOINT ["ash", "/script.sh"]

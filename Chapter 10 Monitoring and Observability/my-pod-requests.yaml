@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod-requests
+  namespace: packt
+spec:
+  containers:
+    - name: my-container-requests
+      image: nginx
+      resources:
+        requests:
+          cpu: 500m

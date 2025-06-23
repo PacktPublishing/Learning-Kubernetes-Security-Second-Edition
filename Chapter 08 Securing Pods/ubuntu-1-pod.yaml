@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ubuntu-1
+  labels:
+    app: util
+spec:
+  hostPID: true
+  hostNetwork: true
+  hostIPC: true
+  containers:
+    - name: ubuntu
+      image: ubuntu
+      imagePullPolicy: Always

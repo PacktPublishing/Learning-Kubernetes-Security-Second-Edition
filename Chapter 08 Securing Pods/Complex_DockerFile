@@ -1,0 +1,21 @@
+FROM ubuntu
+
+# Install dependencies
+RUN apt-get update && apt-get install -y software-properties-common python
+
+# Add Node.js PPA and update sources
+RUN add-apt-repository -y ppa:chris-lea/node.js && \
+    echo "deb http://us.archive.ubuntu.com/ubuntu/ precise universe" >> /etc/apt/sources.list && \
+    apt-get update
+
+# Install Node.js
+RUN apt-get install -y nodejs
+
+# Create app directory
+RUN mkdir -p /var/www
+
+# Copy app.js
+ADD app.js /var/www/app.js
+
+# Set default command
+CMD ["/usr/bin/node", "/var/www/app.js"]

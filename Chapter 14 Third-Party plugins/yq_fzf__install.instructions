@@ -1,0 +1,4 @@
+wget the packages (E.g. wget https://github.com/mikefarah/yq/releases/download/v4.45.4/yq_linux_arm64)
+cp to local/bin (PATH)
+chmod +x to make it an executable
+note for fzf, search for latest release: https://github.com/junegunn/fzf/releases and run similar command as for yq

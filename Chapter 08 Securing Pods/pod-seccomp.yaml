@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: Pod-seccomp
+spec:
+  containers:
+    - name: container-seccomp
+      image: nginx:latest
+      securityContext:
+        seccompProfile:
+          type: Localhost
+          localhostProfile: profiles/audit.json

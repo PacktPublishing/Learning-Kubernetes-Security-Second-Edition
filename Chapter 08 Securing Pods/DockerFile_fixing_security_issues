@@ -1,0 +1,12 @@
+FROM ubuntu@SHA256:
+sha256:d8a65fa49a430cf0e155251a5c4668a24d91e86c1e791b0a73f272b3503ed803
+RUN apt-get update && \
+apt-get install -y apache2 && \
+apt-get clean && \
+rm -rf /var/lib/apt/lists/*
+RUN groupadd --gid 1000 apache && useradd apache --gid 1000
+USER apache
+ENV APACHE_RUN_USER apache
+COPY ports.conf /etc/apache2/ports.conf
+EXPOSE 8080
+CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]

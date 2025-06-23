@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-with-limitrange-cpu
+  namespace: limited
+spec:
+  containers:
+    - name: demo
+      image: nginx
+      resources:
+        requests:
+          cpu: 700m

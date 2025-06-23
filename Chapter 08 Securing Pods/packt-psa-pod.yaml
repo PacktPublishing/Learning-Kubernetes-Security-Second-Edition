@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: packt-psa-Pod
+  namespace: packt-psa
+spec:
+  containers:
+    - name: packt-psa-container
+      image: nginx
+      ports:
+        - containerPort: 80
+      securityContext:
+        privileged: true
