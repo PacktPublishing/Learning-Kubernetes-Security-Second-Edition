@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: range-demo
+  labels:
+    app: range-demo
+spec:
+  containers:
+    - name: range-demo-container
+      image: nginx:latest
+      resources:
+        requests:
+          memory: "129Mi"
+          cpu: "100m"
+        limits:
+          memory: "256Mi"
+          cpu: "500m"

@@ -1,0 +1,19 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: john-role
+  namespace: default
+  creationTimestamp: "2025-01-03T17:14:19Z"
+  resourceVersion: "7595071"
+  uid: 1f67c940-9abe-4ba6-8ab6-b8d2c0264c06
+rules:
+  - apiGroups:
+      - ""
+    resources:
+      - pods
+    verbs:
+      - create
+      - get
+      - list
+      - update
+      - delete

@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cap-sys-module-pod
+  labels:
+    app: testing-app
+spec:
+  containers:
+    - name: cap-sys-module-container
+      image: ubuntu
+      securityContext:
+        capabilities:
+          add:
+            - SYS_MODULE
+      command: ["/bin/sh", "-c", "--"]
+      args: ["while true; do sleep 30; done;"]

@@ -1,0 +1,16 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: binding-john
+  namespace: default
+  creationTimestamp: "2025-01-03T17:16:43Z"
+  resourceVersion: "7595332"
+  uid: 48e0c920-99ae-4eec-bac8-3bed409bf562
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: john-role
+subjects:
+  - kind: User
+    name: john
+    apiGroup: rbac.authorization.k8s.io

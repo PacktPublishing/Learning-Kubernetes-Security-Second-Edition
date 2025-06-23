@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: add-capabilities-container
+spec:
+  containers:
+    - name: nginx
+      image: nginx:latest
+      securityContext:
+        capabilities:
+          add:
+            - NET_ADMIN   # Allow the container to configure networking.
+            - SYS_TIME    # Allow the container to change the system clock.
