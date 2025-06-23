@@ -10,27 +10,27 @@ This repository contains all the hands-on code, YAML manifests, configurations, 
 📂 Repository Structure
 Each folder corresponds to a chapter in the book and contains relevant Kubernetes manifests, security configurations, and supporting files.
 
-bash
-Copy
-Edit
-/chapter01-kubernetes-architecture/
-/chapter02-networking/
-/chapter03-threat-model/
-/chapter04-least-privilege/
-/chapter05-security-boundaries/
-/chapter06-securing-cluster-components/
-/chapter07-authz-authn-admission/
-/chapter08-securing-pods/
-/chapter09-shift-left/
-/chapter10-monitoring-observability/
-/chapter11-log-analysis/
-/chapter12-defense-in-depth/
-/chapter13-vulnerabilities-escapes/
-/chapter14-third-party-plugins/
-/chapter15-Appendix/
-/tools/
-/README.md
-/LICENSE
+
+"/chapter01-kubernetes-architecture/"
+"/chapter02-networking/"
+"/chapter03-threat-model/"
+"/chapter04-least-privilege/"
+"/chapter05-security-boundaries/"
+"/chapter06-securing-cluster-components/"
+"/chapter07-authz-authn-admission/"
+"/chapter08-securing-pods/"
+"/chapter09-shift-left/"
+"/chapter10-monitoring-observability/"
+"/chapter11-log-analysis/"
+"/chapter12-defense-in-depth/"
+"/chapter13-vulnerabilities-escapes/"
+"/chapter14-third-party-plugins/"
+"/chapter15-Appendix/"
+"/tools/"
+"/README.md"
+"/LICENSE"
+
+
 📦 What's Included
 ✅ YAML manifests for Pods, Services, Ingress, RBAC policies, Network Policies, Admission Controllers, and more.
 
