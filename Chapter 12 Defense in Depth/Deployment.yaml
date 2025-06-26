@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres-app
+  namespace: vault
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgres-app
+  template:
+    metadata:
+      labels:
+        app: postgres-app
+      annotations:
+        vault.hashicorp.com/agent-inject: "true"
+        vault.hashicorp.com/role: "vault-sa"
+        vault.hashicorp.com/agent-inject-secret-db-user: "secret/postgres#username"
+        vault.hashicorp.com/agent-inject-secret-db-password: "secret/postgres#password"
+        vault.hashicorp.com/agent-inject-template-db-user: |
+          {{ with secret "secret/postgres" }}
+          {{ .Data.data.username }}
+          {{ end }}
+        vault.hashicorp.com/agent-inject-template-db-password: |
+          {{ with secret "secret/postgres" }}
+          {{ .Data.data.

@@ -1,0 +1,21 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+metadata:
+  name: multi-availability-zones
+  region: us-west-2
+
+nodeGroups:
+  - name: node1
+    instanceType: t3.xlarge
+    availabilityZones:
+      - us-west-2a
+
+  - name: node2
+    instanceType: t3.xlarge
+    availabilityZones:
+      - us-west-2b
+
+  - name: node3
+    instanceType: t3.xlarge
+    availabilityZones:
+      - us-west-2c
